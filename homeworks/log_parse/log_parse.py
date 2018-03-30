@@ -24,7 +24,7 @@ def parse(
             if matches:
                 date_url, type_url, url_info, code, r_time = matches.groups()
                 url, version = url_info.split(' ')
-                url = url.split('://')[1]
+                url = url.split('://')[1].split('?')[0]
                 date = datetime.strptime(date_url, '%d/%b/%Y %H:%M:%S')
 
                 if slow_urls.get(url):

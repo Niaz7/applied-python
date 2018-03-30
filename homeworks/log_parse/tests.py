@@ -2,6 +2,7 @@ import json
 from glob import glob
 from log_parse import parse
 
+
 error_message = 'Ошибка в фаиле {}. Expected: "{}", got: "{}"'
 
 
@@ -12,10 +13,12 @@ def run_tests():
         got = parse(**data['params'])
         for index, item in enumerate(response):
             if len(got) != len(response) or got[index] != response[index]:
-                print("Полученный и ожидаемый массивы различаются, получен: {} ожидался: {}, фаили {}".format(
+                print("Полученный и ожидаемый массивы различаются, получен: {} ожидался: {}, файл {}".format(
                     str(got), str(response), filename
                 ))
                 return
+
+        print('Test {} passed!'.format(filename))
     print("All tests passed!")
 
 

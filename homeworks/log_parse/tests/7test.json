@@ -1,0 +1,13 @@
+{
+  "params": {"ignore_urls": [
+    "www.sys.mail.ru/calendar/config/254/40263/",
+    "sys.mail.ru/calendar/config/254/40265/"
+  ]},
+  "response": [
+    3,
+    2,
+    2,
+    2,
+    2
+  ]
+}
